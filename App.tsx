@@ -10,6 +10,7 @@ import TextDemo from './app/modules/TextDemo';
 import GroupDemo from './app/modules/GroupDemo';
 import Metaball from './app/modules/Metaball';
 import ProgressBar from './app/modules/ProgressBar';
+import DonutChart from './app/modules/DonutChart';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -26,6 +27,7 @@ const App = () => {
           <Stack.Screen name="GroupDemo" component={GroupDemo} />
           <Stack.Screen name="Metaball" component={Metaball} />
           <Stack.Screen name="ProgressBar" component={ProgressBar} />
+          <Stack.Screen name="DonutChart" component={DonutChart} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

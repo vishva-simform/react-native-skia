@@ -4,6 +4,7 @@ import {StyleSheet, View} from 'react-native';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import CanvasDemo from '../CanvasDemo';
 import CanvasSizeDemo from '../CanvasSize';
+import DonutChart from '../DonutChart';
 import GroupDemo from '../GroupDemo';
 import Metaball from '../Metaball';
 import ProgressBar from '../ProgressBar';
@@ -41,6 +42,10 @@ const HomeScreen = () => {
       <PrimaryButton
         title="Progress Bar"
         onPress={() => navigation.navigate(ProgressBar)}
+      />
+      <PrimaryButton
+        title="Donut Chart"
+        onPress={() => navigation.navigate(DonutChart)}
       />
     </View>
   );
