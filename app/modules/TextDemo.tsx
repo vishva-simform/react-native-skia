@@ -13,7 +13,9 @@ import {
 const TextDemo = () => {
   const fontSize = 32;
   const font = useFont(require('../fonts/Roboto-Black.ttf'), fontSize);
-
+  if (font === null) {
+    return null;
+  }
   return (
     <Canvas style={{flex: 1}}>
       <Text x={0} y={fontSize} text="Hello World" font={font} />

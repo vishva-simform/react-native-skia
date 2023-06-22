@@ -26,7 +26,9 @@ const DonutChart = () => {
       duration: 1500,
     },
   );
-
+  if (font === null || powerFont === null) {
+    return null;
+  }
   return (
     <Canvas style={styles.container}>
       <Path
