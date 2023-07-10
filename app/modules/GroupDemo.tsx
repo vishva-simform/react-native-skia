@@ -26,7 +26,7 @@ const GroupDemo = () => {
   const image = useImage(require('../assets/flower.jpeg'));
   const font = useFont(require('../fonts/Roboto-Black.ttf'), 20);
   const bodyFont = useFont(require('../fonts/Roboto-Black.ttf'), 14);
-  if (font === null || bodyFont === null) {
+  if (font === null || bodyFont === null || image === null) {
     return null;
   }
 
@@ -34,13 +34,13 @@ const GroupDemo = () => {
     <>
       <Canvas style={{flex: 1}}>
         {/* paint  demo code */}
-        {false ? (
+        {true ? (
           <Circle c={c} r={r} color="red">
             <Paint color="purple" />
             <Paint
               color="green"
               style="stroke"
-              strokeWidth={20}
+              strokeWidth={50}
               opacity={0.7}
             />
             <Paint
@@ -51,27 +51,27 @@ const GroupDemo = () => {
           </Circle>
         ) : (
           <>
+            {/* //Image  */}
+            {/* <Image
+              image={image}
+              x={10}
+              y={250}
+              width={230}
+              height={200}
+              fit="cover"
+            /> */}
             <Circle cx={r} cy={r} r={r} color="#51AFED" />
-            {/* The paint is inherited by the following sibling and descendants. */}
             <Group
               color="darkBlue"
               style="stroke"
               strokeWidth={10}
-              //   transform={[{translateX: 20}, {translateY: 40}]}
-              //   layer={
-              //     <Paint>
-              //       <Blur blur={6} />
-              //     </Paint>
-              //   }
+              // transform={[{translateX: 20}, {translateY: 40}]}
+              // layer={
+              //   <Paint>
+              //     <Blur blur={6} />
+              //   </Paint>
+              // }
             >
-              <Image
-                image={image}
-                x={10}
-                y={250}
-                width={230}
-                height={200}
-                fit="cover"
-              />
               <Circle
                 origin={vec(123, 123)}
                 transform={[{scaleX: 1.7}, {scaleY: 0.9}]}
@@ -80,16 +80,11 @@ const GroupDemo = () => {
                 r={r / 2}
                 strokeWidth={8}
               />
-              <Circle cx={r} cy={r} r={r / 2.5} color="black" style={'fill'} />
+              <Circle cx={r} cy={r} r={r / 2.5} color="black" />
 
               <Group
                 clip={roundedRect}
                 // invertClip
-                // layer={
-                //   <Paint>
-                //     <Blur blur={1} />
-                //   </Paint>
-                // }
               >
                 <Image
                   image={image}

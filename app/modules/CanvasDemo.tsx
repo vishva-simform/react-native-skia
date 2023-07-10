@@ -28,11 +28,9 @@ const CanvasDemo = () => {
     },
   });
   return (
-    <>
-      <Canvas style={{flex: 1}} onTouch={touchHandler}>
-        <Circle cx={cx} cy={cy} r={20} />
-      </Canvas>
-    </>
+    <Canvas style={{flex: 1}} onTouch={touchHandler}>
+      <Circle cx={cx} cy={cy} r={20} />
+    </Canvas>
   );
 };
 

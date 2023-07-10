@@ -20,12 +20,11 @@ const ShapeDemo = () => {
   return (
     <>
       <Canvas style={{flex: 1}}>
-        {/* <SweepGradient c={center} colors={['lightred', 'red', 'lightred']} /> */}
-        {false ? (
+        {true ? (
           <>
             <Circle cx={100} cy={100} r={80} color="yellow" />
             {/* <Circle c={vec(100, 100)} r={50} /> */}
-            <Rect x={50} y={200} width={256} height={256} color={'red'} />
+            <Rect x={50} y={200} width={256} height={206} color={'red'} />
             <RoundedRect
               x={100}
               y={500}

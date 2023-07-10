@@ -30,12 +30,11 @@ const Metaball = () => {
   }, [value]);
 
   const font = useFont(require('../fonts/Roboto-Black.ttf'), 40);
-  if (font === null) {
+  if (font === null || image === null) {
     return null;
   }
   return (
     <Canvas style={{flex: 1}}>
-      <Rect x={0} y={0} width={width} height={height} />
       <Image
         x={0}
         y={0}
@@ -44,19 +43,6 @@ const Metaball = () => {
         image={image}
         fit={'cover'}
       />
-      <RoundedRect
-        x={24}
-        y={center.y}
-        width={width - 48}
-        height={200}
-        color="#0000"
-        r={12}>
-        <Paint
-          color="rgba(255, 255, 255, 0.8)"
-          style="stroke"
-          strokeWidth={1}
-        />
-      </RoundedRect>
       <BackdropBlur blur={blur} clip={blurClipPath}>
         <Fill color={'rgba(122, 122, 122, 0.2)'} />
       </BackdropBlur>
